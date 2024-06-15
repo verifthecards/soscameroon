@@ -1,0 +1,12 @@
+html,
+body {
+  font-family: var(--font);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: rgba(14, 14, 14, 0.9333333333);
+}
+
+.stream_marketing {
+  background-image: linear-gradient(to right, rgba(19, 83, 17, 0.858), rgba(200, 29, 29, 0.915), rgba(188, 188, 46, 0.926));
+}/*# sourceMappingURL=main.css.map */

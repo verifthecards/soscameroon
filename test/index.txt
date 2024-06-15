@@ -1,0 +1,19 @@
+<?php
+include('connexion.php');
+
+$sql = "SELECT * FROM articles ORDER BY date_creation DESC";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<h2>" . $row["titre"]. "</h2>";
+        echo "<p>" . $row["contenu"]. "</p>";
+        echo "<p>Date de création: " . $row["date_creation"]. "</p>";
+        echo "<hr>";
+    }
+} else {
+    echo "Aucun article trouvé";
+}
+
+$conn->close();
+?>

@@ -1,0 +1,16 @@
+<?php
+include('connexion.php');
+
+$titre = $_POST['titre'];
+$contenu = $_POST['contenu'];
+
+$sql = "INSERT INTO articles (titre, contenu) VALUES ('$titre', '$contenu')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Article ajouté avec succès";
+} else {
+    echo "Erreur lors de l'ajout de l'article: " . $conn->error;
+}
+
+$conn->close();
+?>
